@@ -20,47 +20,108 @@ class MentorCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(vertical: 6),
-      padding: const EdgeInsets.all(12),
+      margin: const EdgeInsets.symmetric(vertical: 10),
+      padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: purpleLight,
-        borderRadius: BorderRadius.circular(12),
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: purpleLight),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black12,
+            blurRadius: 4,
+            offset: Offset(0, 2),
+          ),
+        ],
       ),
-      child: Row(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          // Avatar
           CircleAvatar(
             backgroundImage: NetworkImage(imageUrl),
-            radius: 30,
+            radius: 32,
           ),
-          const SizedBox(width: 12),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+          const SizedBox(height: 12),
+
+          // Nome
+          Text(
+            name,
+            style: const TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+
+          // Curso e semestre
+          Text(
+            '$course • $semester',
+            style: const TextStyle(
+              fontSize: 14,
+              color: Colors.black54,
+            ),
+          ),
+
+          const SizedBox(height: 8),
+
+          // Expertise
+          RichText(
+            text: TextSpan(
+              text: 'Expertise: ',
+              style: const TextStyle(
+                color: purple,
+                fontWeight: FontWeight.w500,
+                fontSize: 13,
+              ),
               children: [
-                Text(name,
-                    style: const TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 16,
-                        color: Colors.black)),
-                Text(course,
-                    style:
-                        const TextStyle(fontWeight: FontWeight.w600, color: Colors.black54)),
-                Text(semester,
-                    style:
-                        const TextStyle(fontWeight: FontWeight.w600, color: Colors.black54)),
-                Wrap(
-                  spacing: 8,
-                  children: expertise
-                      .map((e) => Chip(
-                            label: Text(e),
-                            backgroundColor: purple,
-                            labelStyle: const TextStyle(color: Colors.white),
-                          ))
-                      .toList(),
-                )
+                TextSpan(
+                  text: expertise.join(', '),
+                  style: const TextStyle(
+                    color: Colors.black45,
+                    fontWeight: FontWeight.normal,
+                  ),
+                ),
               ],
             ),
-          )
+          ),
+
+          const SizedBox(height: 16),
+
+          // Botões
+          Row(
+            children: [
+              Expanded(
+                child: OutlinedButton(
+                  onPressed: () {},
+                  style: OutlinedButton.styleFrom(
+                    foregroundColor: purple,
+                    side: BorderSide(color: purple),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    padding: const EdgeInsets.symmetric(vertical: 12),
+                  ),
+                  child: const Text('Ver perfil'),
+                ),
+              ),
+              const SizedBox(width: 8),
+              Expanded(
+                child: ElevatedButton.icon(
+                  onPressed: () {},
+                  icon: const Icon(Icons.chat_bubble_outline, size: 18),
+                  label: const Text('Conversar'),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: purple,
+                    foregroundColor: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    padding: const EdgeInsets.symmetric(vertical: 12),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );

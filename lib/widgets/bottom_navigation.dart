@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../colors.dart';
+import 'menu_modal.dart';
 
 class BottomNavigation extends StatefulWidget {
   const BottomNavigation({super.key});
@@ -33,6 +34,16 @@ class _BottomNavigationState extends State<BottomNavigation> {
       case 4:
       // Navegar para Horários, se existir
         break;
+      case 5:
+        showModalBottomSheet(
+          context: context,
+          isScrollControlled: true,
+          shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
+          ),
+          builder: (context) => const MenuModal(),
+        );
+        break;
     }
   }
 
@@ -50,6 +61,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
         BottomNavigationBarItem(icon: Icon(Icons.group), label: 'Mentorias'),
         BottomNavigationBarItem(icon: Icon(Icons.map), label: 'Mapa'),
         BottomNavigationBarItem(icon: Icon(Icons.schedule), label: 'Horários'),
+        BottomNavigationBarItem(icon: Icon(Icons.menu), label: 'Menu'),
       ],
     );
   }

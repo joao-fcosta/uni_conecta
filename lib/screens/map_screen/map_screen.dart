@@ -37,27 +37,37 @@ class MapScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 16),
-              Wrap(
-                spacing: 12,
-                runSpacing: 12,
-                children: const [
-                  _CategoryChip(
-                    icon: Icons.menu_book,
-                    label: 'Salas de Aula',
-                  ),
-                  _CategoryChip(
-                    icon: Icons.apartment,
-                    label: 'Administrativo',
-                  ),
-                  _CategoryChip(
-                    icon: Icons.local_dining,
-                    label: 'Alimentação',
-                  ),
-                  _CategoryChip(
-                    icon: Icons.directions_bus,
-                    label: 'Transporte',
-                  ),
-                ],
+              LayoutBuilder(
+                builder: (context, constraints) {
+                  // Defina o número de itens por linha desejado
+                  int crossAxisCount = 4;
+
+                  // Espaçamento entre os itens (igual ao seu spacing do Wrap)
+                  double spacing = 12;
+
+                  // Calcule a largura máxima que cada chip pode ocupar
+                  double maxItemWidth =
+                      (constraints.maxWidth - (spacing * (crossAxisCount - 1))) / crossAxisCount;
+
+                  return Wrap(
+                    spacing: spacing,
+                    runSpacing: spacing,
+                    children: const [
+                      _CategoryChip(icon: Icons.menu_book, label: 'Salas de Aula'),
+                      _CategoryChip(icon: Icons.apartment, label: 'Administrativo'),
+                      _CategoryChip(icon: Icons.local_dining, label: 'Alimentação'),
+                      _CategoryChip(icon: Icons.directions_bus, label: 'Transporte'),
+                    ].map((chip) {
+                      return SizedBox(
+                        width: maxItemWidth,
+                        child: AspectRatio(
+                          aspectRatio: 1.0,
+                          child: chip,
+                        ),
+                      );
+                    }).toList(),
+                  );
+                },
               ),
               const SizedBox(height: 24),
               _MapPlaceholder(),
@@ -86,7 +96,6 @@ class MapScreen extends StatelessWidget {
               const _PlaceCard(
                 title: 'Biblioteca Central',
                 category: 'Administrativo',
-                selected: true,
               ),
               const _PlaceCard(
                 title: 'Restaurante Universitário',
