@@ -1,6 +1,6 @@
 # uni_conecta
 
-A new Flutter project.
+PROJETO DESAFIO X
 
 ## Getting Started
 
