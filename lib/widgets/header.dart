@@ -27,7 +27,11 @@ class Header extends StatelessWidget {
           const Text(
             'Quarta-Feira, 14 De Maio',
             style: TextStyle(
+<<<<<<< HEAD
               color: Color.fromARGB(255, 0, 0, 0),
+=======
+              color: AppColors.branco,
+>>>>>>> a21bf1f8a37b2b04c08e7a4f7e803150df111a4b
               fontWeight: FontWeight.w500,
             ),
           ),
