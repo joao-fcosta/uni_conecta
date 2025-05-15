@@ -53,11 +53,13 @@ class HomeScreen extends StatelessWidget {
                           label: 'Bolsas e Auxílios',
                           bgColor: Color(0xFFD7CBFF),
                         ),
-                        const QuickAccessItem(
+                        QuickAccessItem(
                           icon: Icons.group,
                           label: 'Mentorias',
                           bgColor: Color(0xFFCEE1FF),
-                          selected: true,
+                          onTap: () {
+                            Navigator.pushNamed(context, '/mentoring');
+                          },
                         ),
                         QuickAccessItem(
                           icon: Icons.location_on,

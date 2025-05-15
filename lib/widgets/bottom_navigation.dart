@@ -26,7 +26,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
       // Navegar para Bolsas e Auxílios, se existir
         break;
       case 2:
-      // Navegar para Mentorias, se existir
+        Navigator.pushNamed(context, '/mentoring');
         break;
       case 3:
         Navigator.pushNamed(context, '/map');

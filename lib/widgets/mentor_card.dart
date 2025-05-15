@@ -7,6 +7,7 @@ class MentorCard extends StatelessWidget {
   final String course;
   final String semester;
   final List<String> expertise;
+  final dynamic backgroundColor;
 
   const MentorCard({
     super.key,
@@ -15,6 +16,7 @@ class MentorCard extends StatelessWidget {
     required this.course,
     required this.semester,
     required this.expertise,
+    this.backgroundColor = purpleLight,
   });
 
   @override
@@ -23,8 +25,16 @@ class MentorCard extends StatelessWidget {
       margin: const EdgeInsets.symmetric(vertical: 10),
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: purpleLight,
+        color: backgroundColor,
         borderRadius: BorderRadius.circular(12),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.blue.withOpacity(0.2),
+            spreadRadius: 1,
+            blurRadius: 8,
+            offset: const Offset(0, 4),
+          ),
+        ],
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
