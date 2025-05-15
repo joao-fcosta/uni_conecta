@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
 import '../colors.dart';
+import 'menu_item.dart'; // 👈 Importação aqui
 
 class MenuModal extends StatelessWidget {
   const MenuModal({super.key});
+
+  void _navigate(BuildContext context, String routeName) {
+    Navigator.pop(context);
+    Navigator.pushNamed(context, routeName);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -29,11 +35,11 @@ class MenuModal extends StatelessWidget {
           Wrap(
             spacing: 20,
             runSpacing: 20,
-            children: const [
-              MenuItem(icon: Icons.dashboard, label: 'Dashboard'),
+            children: [
+              MenuItem(icon: Icons.dashboard, label: 'Dashboard', onTap: () => _navigate(context, '/home')),
               MenuItem(icon: Icons.card_giftcard, label: 'Bolsas e Auxílios'),
-              MenuItem(icon: Icons.group, label: 'Mentorias'),
-              MenuItem(icon: Icons.map, label: 'Mapa'),
+              MenuItem(icon: Icons.group, label: 'Mentorias', onTap: () => _navigate(context, '/mentoring')),
+              MenuItem(icon: Icons.map, label: 'Mapa', onTap: () => _navigate(context, '/map')),
               MenuItem(icon: Icons.schedule, label: 'Horários'),
               MenuItem(icon: Icons.menu_book, label: 'Regulamentos'),
               MenuItem(icon: Icons.work, label: 'Trabalhos'),
@@ -43,32 +49,6 @@ class MenuModal extends StatelessWidget {
           ),
         ],
       ),
-    );
-  }
-}
-
-class MenuItem extends StatelessWidget {
-  final IconData icon;
-  final String label;
-
-  const MenuItem({required this.icon, required this.label, super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        Container(
-          decoration: BoxDecoration(
-            color: Colors.grey.shade100,
-            borderRadius: BorderRadius.circular(16),
-          ),
-          padding: const EdgeInsets.all(16),
-          child: Icon(icon, color: purple),
-        ),
-        const SizedBox(height: 6),
-        Text(label, style: const TextStyle(fontSize: 12)),
-      ],
     );
   }
 }
