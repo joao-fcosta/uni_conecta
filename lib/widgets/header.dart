@@ -21,14 +21,18 @@ class Header extends StatelessWidget {
             style: TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 22,
-              color: AppColors.branco,
+              color: Color.fromARGB(255, 0, 0, 0),
             ),
           ),
           const SizedBox(height: 4),
           const Text(
             'Quarta-Feira, 14 De Maio',
             style: TextStyle(
+<<<<<<< HEAD
+              color: Color.fromARGB(255, 0, 0, 0),
+=======
               color: AppColors.branco,
+>>>>>>> a21bf1f8a37b2b04c08e7a4f7e803150df111a4b
               fontWeight: FontWeight.w500,
             ),
           ),
