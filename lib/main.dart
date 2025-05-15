@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'screens/home_screen.dart';
+import 'screens/home_screen/home_screen.dart';
+import 'screens/map_screen/map_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,6 +14,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: const HomeScreen(),
+      routes: {
+        '/home': (context) => const HomeScreen(),
+        '/map': (context) => const MapScreen(),
+      },
     );
   }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../colors.dart';
+import '../ui/app_colors.dart';
 
 class Header extends StatelessWidget {
   const Header({super.key});
@@ -20,14 +21,14 @@ class Header extends StatelessWidget {
             style: TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 22,
-              color: Color.fromARGB(255, 0, 0, 0),
+              color: AppColors.branco,
             ),
           ),
           const SizedBox(height: 4),
           const Text(
             'Quarta-Feira, 14 De Maio',
             style: TextStyle(
-              color: purple,
+              color: AppColors.branco,
               fontWeight: FontWeight.w500,
             ),
           ),
