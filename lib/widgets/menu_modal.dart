@@ -42,7 +42,7 @@ class MenuModal extends StatelessWidget {
               MenuItem(icon: Icons.map, label: 'Mapa', onTap: () => _navigate(context, '/map')),
               MenuItem(icon: Icons.schedule, label: 'Horários', onTap: () => _navigate(context, '/schedule')),
               MenuItem(icon: Icons.menu_book, label: 'Regulamentos', onTap: () => _navigate(context, '/regulations')),
-              MenuItem(icon: Icons.work, label: 'Trabalhos'),
+              MenuItem(icon: Icons.work, label: 'Trabalhos', onTap: () => _navigate(context, '/academic_support')),
               MenuItem(icon: Icons.notifications, label: 'Notificações'),
               MenuItem(icon: Icons.person, label: 'Perfil', onTap: () => _navigate(context, '/userprofile')),
             ],

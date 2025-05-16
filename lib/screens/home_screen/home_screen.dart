@@ -92,6 +92,9 @@ class HomeScreen extends StatelessWidget {
                           icon: Icons.description,
                           label: 'Trabalhos',
                           bgColor: Color(0xFFFFDCDC),
+                          onTap: () {
+                            Navigator.pushNamed(context, '/academic_support');
+                          },
                         ),
                       ],
                     ),
