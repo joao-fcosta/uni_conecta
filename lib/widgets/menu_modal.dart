@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lucide_icons/lucide_icons.dart';
 import '../colors.dart';
 import 'menu_item.dart'; // 👈 Importação aqui
 
@@ -36,15 +37,15 @@ class MenuModal extends StatelessWidget {
             spacing: 20,
             runSpacing: 20,
             children: [
-              MenuItem(icon: Icons.dashboard, label: 'Dashboard', onTap: () => _navigate(context, '/home')),
-              MenuItem(icon: Icons.card_giftcard, label: 'Bolsas e Auxílios', onTap: () => _navigate(context, '/scholarship')),
-              MenuItem(icon: Icons.group, label: 'Mentorias', onTap: () => _navigate(context, '/mentoring')),
-              MenuItem(icon: Icons.map, label: 'Mapa', onTap: () => _navigate(context, '/map')),
-              MenuItem(icon: Icons.schedule, label: 'Horários', onTap: () => _navigate(context, '/schedule')),
-              MenuItem(icon: Icons.menu_book, label: 'Regulamentos', onTap: () => _navigate(context, '/regulations')),
-              MenuItem(icon: Icons.work, label: 'Trabalhos', onTap: () => _navigate(context, '/academic_support')),
-              MenuItem(icon: Icons.notifications, label: 'Notificações'),
-              MenuItem(icon: Icons.person, label: 'Perfil', onTap: () => _navigate(context, '/userprofile')),
+              MenuItem(icon: LucideIcons.graduationCap, label: 'Dashboard', onTap: () => _navigate(context, '/home')),
+              MenuItem(icon: LucideIcons.award, label: 'Bolsas e Auxílios', onTap: () => _navigate(context, '/scholarship')),
+              MenuItem(icon: LucideIcons.users, label: 'Mentorias', onTap: () => _navigate(context, '/mentoring')),
+              MenuItem(icon: LucideIcons.mapPin, label: 'Mapa', onTap: () => _navigate(context, '/map')),
+              MenuItem(icon: LucideIcons.calendar, label: 'Horários', onTap: () => _navigate(context, '/schedule')),
+              MenuItem(icon: LucideIcons.bookOpen, label: 'Regulamentos', onTap: () => _navigate(context, '/regulations')),
+              MenuItem(icon: LucideIcons.fileText, label: 'Trabalhos', onTap: () => _navigate(context, '/academic_support')),
+              MenuItem(icon: LucideIcons.bell, label: 'Notificações'),
+              MenuItem(icon: LucideIcons.settings, label: 'Perfil', onTap: () => _navigate(context, '/userprofile')),
             ],
           ),
         ],

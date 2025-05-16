@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:lucide_icons/lucide_icons.dart';
 import '../../colors.dart';
 import '../../widgets/bottom_navigation.dart';
+import '../../widgets/categoryChip.dart';
 
 
 class MapScreen extends StatelessWidget {
@@ -53,10 +55,10 @@ class MapScreen extends StatelessWidget {
                     spacing: spacing,
                     runSpacing: spacing,
                     children: const [
-                      _CategoryChip(icon: Icons.menu_book, label: 'Salas de Aula'),
-                      _CategoryChip(icon: Icons.apartment, label: 'Administrativo'),
-                      _CategoryChip(icon: Icons.local_dining, label: 'Alimentação'),
-                      _CategoryChip(icon: Icons.directions_bus, label: 'Transporte'),
+                      CategoryChip(icon: LucideIcons.bookOpen, label: 'Salas de Aula'),
+                      CategoryChip(icon: LucideIcons.building2, label: 'Administrativo'),
+                      CategoryChip(icon: LucideIcons.coffee, label: 'Alimentação'),
+                      CategoryChip(icon: LucideIcons.bus, label: 'Transporte'),
                     ].map((chip) {
                       return SizedBox(
                         width: maxItemWidth,
@@ -154,7 +156,7 @@ class _MapPlaceholder extends StatelessWidget {
           const Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(Icons.location_on, color: purple, size: 40),
+              Icon(LucideIcons.mapPin, color: purple, size: 40),
               SizedBox(height: 8),
               Text(
                 'Mapa interativo do campus',

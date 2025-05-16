@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lucide_icons/lucide_icons.dart';
 import '../../colors.dart';
 import '../../widgets/bottom_navigation.dart';
 import '../../widgets/class_card.dart';
@@ -49,7 +50,7 @@ class HomeScreen extends StatelessWidget {
                       physics: const NeverScrollableScrollPhysics(), // evita rolagem interna
                       children: [
                        QuickAccessItem(
-                          icon: Icons.card_giftcard,
+                          icon: LucideIcons.award,
                           label: 'Bolsas e Auxílios',
                           bgColor: Color(0xFFD7CBFF),
                          onTap: () {
@@ -57,7 +58,7 @@ class HomeScreen extends StatelessWidget {
                          },
                         ),
                         QuickAccessItem(
-                          icon: Icons.group,
+                          icon: LucideIcons.users,
                           label: 'Mentorias',
                           bgColor: Color(0xFFCEE1FF),
                           onTap: () {
@@ -65,7 +66,7 @@ class HomeScreen extends StatelessWidget {
                           },
                         ),
                         QuickAccessItem(
-                          icon: Icons.location_on,
+                          icon: LucideIcons.mapPin,
                           label: 'Mapa',
                           bgColor: Color(0xFFD2F7D1),
                           onTap: () {
@@ -73,7 +74,7 @@ class HomeScreen extends StatelessWidget {
                           },
                         ),
                         QuickAccessItem(
-                          icon: Icons.calendar_today,
+                          icon: LucideIcons.calendar,
                           label: 'Horários',
                           bgColor: Color(0xFFFFF9DB),
                           onTap: () {
@@ -81,7 +82,7 @@ class HomeScreen extends StatelessWidget {
                           },
                         ),
                         QuickAccessItem(
-                          icon: Icons.menu_book,
+                          icon: LucideIcons.bookOpen,
                           label: 'Regulamentos',
                           bgColor: Color(0xFFCEE1FF),
                           onTap: () {
@@ -89,7 +90,7 @@ class HomeScreen extends StatelessWidget {
                           },
                         ),
                         QuickAccessItem(
-                          icon: Icons.description,
+                          icon: LucideIcons.fileText,
                           label: 'Trabalhos',
                           bgColor: Color(0xFFFFDCDC),
                           onTap: () {

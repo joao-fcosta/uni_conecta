@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lucide_icons/lucide_icons.dart';
 import '../colors.dart';
 import 'menu_modal.dart';
 
@@ -56,12 +57,12 @@ class _BottomNavigationState extends State<BottomNavigation> {
       showUnselectedLabels: true,
       onTap: _onItemTapped,
       items: const [
-        BottomNavigationBarItem(icon: Icon(Icons.dashboard), label: 'Dashboard'),
-        BottomNavigationBarItem(icon: Icon(Icons.card_giftcard), label: 'Bolsas e Auxílios'),
-        BottomNavigationBarItem(icon: Icon(Icons.group), label: 'Mentorias'),
-        BottomNavigationBarItem(icon: Icon(Icons.map), label: 'Mapa'),
-        BottomNavigationBarItem(icon: Icon(Icons.schedule), label: 'Horários'),
-        BottomNavigationBarItem(icon: Icon(Icons.menu), label: 'Menu'),
+        BottomNavigationBarItem(icon: Icon(LucideIcons.graduationCap), label: 'Dashboard'),
+        BottomNavigationBarItem(icon: Icon(LucideIcons.award), label: 'Bolsas e Auxílios'),
+        BottomNavigationBarItem(icon: Icon(LucideIcons.users), label: 'Mentorias'),
+        BottomNavigationBarItem(icon: Icon(LucideIcons.mapPin), label: 'Mapa'),
+        BottomNavigationBarItem(icon: Icon(LucideIcons.calendar), label: 'Horários'),
+        BottomNavigationBarItem(icon: Icon(LucideIcons.menu), label: 'Menu'),
       ],
     );
   }
