@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lucide_icons/lucide_icons.dart';
-import '../colors.dart'; // se estiver usando a paleta personalizada
+import '../colors.dart';
 
 class CategoryChip extends StatelessWidget {
   final IconData icon;
