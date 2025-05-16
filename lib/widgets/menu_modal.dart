@@ -44,7 +44,7 @@ class MenuModal extends StatelessWidget {
               MenuItem(icon: Icons.menu_book, label: 'Regulamentos', onTap: () => _navigate(context, '/regulations')),
               MenuItem(icon: Icons.work, label: 'Trabalhos'),
               MenuItem(icon: Icons.notifications, label: 'Notificações'),
-              MenuItem(icon: Icons.person, label: 'Perfil'),
+              MenuItem(icon: Icons.person, label: 'Perfil', onTap: () => _navigate(context, '/userprofile')),
             ],
           ),
         ],
