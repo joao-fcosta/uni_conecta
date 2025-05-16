@@ -72,10 +72,13 @@ class HomeScreen extends StatelessWidget {
                             Navigator.pushNamed(context, '/map');
                           },
                         ),
-                        const QuickAccessItem(
+                        QuickAccessItem(
                           icon: Icons.calendar_today,
                           label: 'Horários',
                           bgColor: Color(0xFFFFF9DB),
+                          onTap: () {
+                            Navigator.pushNamed(context, '/schedule');
+                          },
                         ),
                         const QuickAccessItem(
                           icon: Icons.menu_book,

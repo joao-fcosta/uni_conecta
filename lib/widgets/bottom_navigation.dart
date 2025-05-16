@@ -32,7 +32,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
         Navigator.pushNamed(context, '/map');
         break;
       case 4:
-      // Navegar para Horários, se existir
+        Navigator.pushNamed(context, '/schedule');
         break;
       case 5:
         showModalBottomSheet(
