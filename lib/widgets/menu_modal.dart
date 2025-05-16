@@ -37,7 +37,7 @@ class MenuModal extends StatelessWidget {
             runSpacing: 20,
             children: [
               MenuItem(icon: Icons.dashboard, label: 'Dashboard', onTap: () => _navigate(context, '/home')),
-              MenuItem(icon: Icons.card_giftcard, label: 'Bolsas e Auxílios'),
+              MenuItem(icon: Icons.card_giftcard, label: 'Bolsas e Auxílios', onTap: () => _navigate(context, '/scholarship')),
               MenuItem(icon: Icons.group, label: 'Mentorias', onTap: () => _navigate(context, '/mentoring')),
               MenuItem(icon: Icons.map, label: 'Mapa', onTap: () => _navigate(context, '/map')),
               MenuItem(icon: Icons.schedule, label: 'Horários'),

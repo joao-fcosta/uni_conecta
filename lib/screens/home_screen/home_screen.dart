@@ -48,10 +48,13 @@ class HomeScreen extends StatelessWidget {
                       mainAxisSpacing: 12,
                       physics: const NeverScrollableScrollPhysics(), // evita rolagem interna
                       children: [
-                        const QuickAccessItem(
+                       QuickAccessItem(
                           icon: Icons.card_giftcard,
                           label: 'Bolsas e Auxílios',
                           bgColor: Color(0xFFD7CBFF),
+                         onTap: () {
+                           Navigator.pushNamed(context, '/scholarship');
+                         },
                         ),
                         QuickAccessItem(
                           icon: Icons.group,
@@ -235,6 +238,7 @@ class HomeScreen extends StatelessWidget {
                 course: 'Engenharia de Computação',
                 semester: '8º semestre',
                 expertise: ['Programação', 'Cálculo'],
+                backgroundColor: Colors.white,
               ),
               const MentorCard(
                 imageUrl: 'https://randomuser.me/api/portraits/men/46.jpg',
@@ -242,6 +246,7 @@ class HomeScreen extends StatelessWidget {
                 course: 'Administração',
                 semester: '6º semestre',
                 expertise: ['Finanças', 'Marketing'],
+                backgroundColor: Colors.white,
               ),
               const SizedBox(height: 24),
             ],

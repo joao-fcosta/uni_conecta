@@ -23,7 +23,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
         Navigator.pushNamed(context, '/home');
         break;
       case 1:
-      // Navegar para Bolsas e Auxílios, se existir
+        Navigator.pushNamed(context, '/scholarship');
         break;
       case 2:
         Navigator.pushNamed(context, '/mentoring');

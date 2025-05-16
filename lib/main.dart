@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'screens/scholarship_screen/scholarship_screen.dart';
 import 'screens/home_screen/home_screen.dart';
 import 'screens/map_screen/map_screen.dart';
 import 'screens/mentoring_screen/mentoring_screen.dart';
@@ -18,7 +19,8 @@ class MyApp extends StatelessWidget {
       routes: {
         '/home': (context) => const HomeScreen(),
         '/map': (context) => const MapScreen(),
-        '/mentoring': (context) => const MentoringScreen()
+        '/mentoring': (context) => const MentoringScreen(),
+        '/scholarship': (context) => const ScholarshipScreen()
       },
     );
   }
