@@ -80,12 +80,15 @@ class HomeScreen extends StatelessWidget {
                             Navigator.pushNamed(context, '/schedule');
                           },
                         ),
-                        const QuickAccessItem(
+                        QuickAccessItem(
                           icon: Icons.menu_book,
                           label: 'Regulamentos',
                           bgColor: Color(0xFFCEE1FF),
+                          onTap: () {
+                            Navigator.pushNamed(context, '/regulations');
+                          },
                         ),
-                        const QuickAccessItem(
+                        QuickAccessItem(
                           icon: Icons.description,
                           label: 'Trabalhos',
                           bgColor: Color(0xFFFFDCDC),
